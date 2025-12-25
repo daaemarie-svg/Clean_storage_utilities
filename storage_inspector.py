@@ -1,4 +1,4 @@
-#Cloud Priority inspector Script
+#New Hawk Duplicate File Inspector for all paths including pCloud
 import os, hashlib, time
 
 MIN_SIZE_MB = 500 
@@ -13,7 +13,7 @@ def storage_inspection():
     print(f"--- 🕵️ Strategic Inspector: Scanning for Duplicates ---")
     for drive in SEARCH_PATHS:
         if not os.path.exists(drive): continue
-        for root, dirs, files in os.walk(drive):
+        for root, dirs, files in os.walk(drive, followlinks=True):
             for name in files:
                 files_scanned += 1
                 if files_scanned % 500 == 0: # Mile marker every 500 files
