@@ -1,8 +1,14 @@
 import os, hashlib
+from pathlib import Path
+
 # --- The Personality / Atmosphere ---
 OUTCOME_LABEL = "COMPOST" # Setting the outcome label to Compost
+
+# THE COMPASS
+home = Path.home()
+
 #The path to the "cluttered" area
-path = os.path.expanduser("~/Downloads")
+path = home / "Downloads"
 files_seen = {}
 
 def find_duplicates():

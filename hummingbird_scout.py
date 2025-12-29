@@ -3,10 +3,14 @@ from pathlib import Path
 
 # --- CONFIGURATION ---
 MIN_SIZE_MB = 10
+
+#THE COMPASS: This finds 'April Book' OR 'daniellec' automatically.
+home = Path.home()
+
 SEARCH_PATHS = [
-    "/Users/AprilBook/pCloud Drive",
-    Path.home() / "Library/Mobile Documents/com~apple~CloudDocs",
-    Path.home() / "Downloads"
+    home / "pCloud Drive",
+    home / "Library/Mobile Documents/com~apple~CloudDocs",
+    home / "Downloads"
 ]
 
 dna_vault, clog_list = {}, []

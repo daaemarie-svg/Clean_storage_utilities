@@ -1,10 +1,15 @@
 import hashlib, os, time, shutil
 from pathlib import Path
+
+#THE COMPASS: This finds 'April Book' OR 'daniellec' automatically.
+home = Path.home()
+
+#The GROVES: Using the compass to find the folders.
 MIN_SIZE_MB = 500
 SEARCH_PATHS = [
-    "/Users/AprilBook/pCloud Drive",
-    Path.home() / "Library/Mobile Documents/com~apple~CloudDocs",
-    Path.home() / "Downloads"
+    home / "pCloud Drive",
+    home / "Library/Mobile Documents/com~apple~CloudDocs",
+    home / "Downloads"
 
 ]
 

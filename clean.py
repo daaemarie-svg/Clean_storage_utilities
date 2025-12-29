@@ -1,5 +1,11 @@
+#clean.py purpose and logic. This script is used for a Forest Survey of the downloads folder. It 
+#identifies 'cluttered spots' based on two criteria: Heavy files larger than 100MB and Old growth files older than 30 days. 
+
 import os, time
-path = os.path.expanduser("~/Downloads")
+from pathlib import Path
+
+home = Path.home()
+path = home / "Downloads"
 
 def survey_forest():
     for file in os.listdir(path):

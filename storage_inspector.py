@@ -1,7 +1,15 @@
 import os, hashlib, time
+from pathlib import Path 
+
+#THE COMPASS
+home = Path.home()
 
 MIN_SIZE_MB = 500 
-SEARCH_PATHS = ["/Users/AprilBook/pCloud Drive", os.path.expanduser("~/Downloads")]
+
+SEARCH_PATHS = [
+    home / "pCloud Drive",
+    home / "Downloads"
+]
 dna_vault, clog_list = {}, []
 
 def storage_inspection():
